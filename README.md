@@ -1,2 +1,2 @@
 # websites
-Websites of BlueBanquise and Algoric
+Website of BlueBanquise
