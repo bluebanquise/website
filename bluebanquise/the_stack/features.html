@@ -117,97 +117,112 @@
               Features
             </h1>
             <p class="subtitle is-4">
-              A core, some addons, all <strong>modular</strong>
+              Stack structure and capabilities
             </p>
           </div>
         </header>
         <div class="bd-content">
           <div class="content">
-<span style="color: #108bde">Blue</span>Banquise is a generic stack, made to handle simple workstations IT room, HPC cluster, enterprise network, etc.
-<br>
-We try to keep it as simple as possible, having advanced features optional.
-<br>
+We try to keep <span style="color: #108bde">Blue</span>Banquise as simple and generic as possible, having advanced features optional.
 <br>
 <a id="modularity"></a>
-The stack provides many features. This page will attempt to expose them.
+The stack provides many possibilities. This page attempts to expose them.
 <br>
 <br>
-
 <h2 class="title">
 Modularity and flexibility
 </h2>
-
+<br>
 <div class="columns is-vcentered">
   <div class="column">
-<span style="color: #108bde">Blue</span>Banquise can be seen as a set of Ansible roles, which ensure full modularity.
+    <p class="subtitle is-5">
+      Half generic, half specialized
+    </p>
+<span style="color: #108bde">Blue</span>Banquise is split between 2 roles collections:
+<br>
+<ul>
+  <li><b>Core</b>: the CORE of the stack, focused on providing roles and tools to deploy hosts and configure vital services. CORE is generic to any kind of cluster.</li>
+  <li><b>Community</b>: COMMUNITY roles and tools provides additional production level features on top of CORE to specialize cluster.</li>
+</ul>
+  </div>
+  <div class="column is-8">
+    <div style="text-align:center;" height="100px">
+      <img src="/images/COREvsCOMMUNITY.svg" alt="CORE and COMMUNITY">
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<div class="columns is-vcentered">
+  <div class="column">
+    <p class="subtitle is-5">
+      Ansible roles collections around a data-model
+    </p>
+<span style="color: #108bde">Blue</span>Banquise can be seen as a set of <b>Ansible roles collections</b>, which ensure full modularity.
 <br>Even elements of the core can be replaced by others.
+<br>A <b>data model</b> ensure coherency between roles.
 <br>
 <br>
 The Ansible inventories structure used can handle a wide range of cluster and network architectures, and allows adding more variables as desired.
   </div>
   <div class="column is-8">
-    <div style="text-align:center;" height="150px">
-      <img src="/images/modularity_roles.svg" alt="BlueBanquise, an Ansible stack">
+    <div style="text-align:center;">
+      <img src="/images/Modularity.svg" alt="BlueBanquise, an Ansible stack">
     </div>
   </div>
 </div>
+
+
+
+
 <a id="modernity"></a>
 <br>
 <br>
 
 <h2 class="title">
-Modern
+Compatible and modern
 </h2>
 
 The whole stack is based on <b>python</b> 3.6+ and <b>Ansible</b>, for better long term investment.
 <br>
-The PXE stack is Legacy or EFI compatible.
+The PXE stack is Legacy or EFI compatible, and should allow to boot any kind of hardware.
 <br>
 <br>
-A focus is made on reducing scripting to the minimum.<a id="compatibility"></a>
+A focus is made on reducing scripting to the minimum, allowing stack to grow and extend easily.<a id="compatibility"></a>
+<br>
+<br>
+All stack data are stored in plain text files, in YAML format, using Ansible inventory folders structure.
+<br>
+No binaries + no databases = <b>fully editable and tunable with minimal knowledge</b>.
 <br>
 <br>
 <h2>Technical details</h2>
 
-<h3>Supported OS and platform</h3>
+<h3 class="subtitle is-5">Supported OS and platform</h3>
 
 In its current state, stack can deploy on mixed Linux distributions and platform (in the same cluster), including:
 
 <ul>
-  <li>RHEL and derivated, versions 7.X and 8.X</li>
+  <li><b>RHEL</b> and derivated, versions 7.X and 8.X</li>
+  <li><b>Ubuntu</b> version 20.04</li>
 </ul>
-Depending of the demand, Ubuntu, Debian or OpenSuse could be fully implemented.
+OpenSuse and Debian are scheduled to be fully implemented.
 <br>
-Tested platform were <b>x86_64</b> for RHEL, but stack should be able to deploy on <b>arm64</b>.<br>
+Stack is compatible with <b>x86_64</b> and <b>arm64/aarch64</b> platforms.<br>
 <br>
-This ability to handle multiple Linux distributions and architectures at the same time, allows to easily handle exotic hardware or customer needs.
+This ability to handle multiple Linux distributions and architectures at the same time, allows to easily handle exotic hardware or cluster needs.
 
-<h3>Data</h3>
+<h3 class="subtitle is-5">Roles</h3>
 
-All stack data are stored in plain text files, in YAML format, using Ansible inventory folders structure.
-<br>
-<br>
-No binaries + no databases = <b>fully editable and tunable with minimal knowledge</b>.
+The stack provides many Ansible roles, seen as independent elements.
+Roles are autonomous from each other's, to be easily switched with externals or user's custom roles.
 
-<h3>Roles</h3>
-
-The stack provides many Ansible roles, seen as independent modules.
-Roles are nearly all autonomous from each other's, to be easily switched with others.
-<br>
-<br>
-Roles are split between the <a href="https://github.com/bluebanquise/bluebanquise"><b>CORE</b></a>
-that focus on deploying operating system and
-configure very basic and mandatory services (repositories, dns, time, etc.), and the
-<a href="https://github.com/bluebanquise/community"><b>COMMUNITY</b></a> that provides additional roles
-to specialize the deployed cluster of nodes (HPC cluster, render farm, etc.).
-<br>
-
-<h3>Specific advanced features</h3>
+<h3 class="subtitle is-5">Specific advanced features</h3>
 
 The stack also as few native mechanisms under the hood. These features are a need for us, so we added them.
 <br>
 <br>
-<h4>Multi Icebergs</h4>
+<h4 class="subtitle is-6">Multi Icebergs</h4>
 
 This feature is sometime called multi islands in HPC or Cloud.<br>
 <br>
@@ -219,7 +234,7 @@ each iceberg being managed by a group of management nodes and isolated from the 
 This feature is mainly used:
 
 <ul>
-  <li>When there is a need to separated parts of the cluster (our case, to provide dedicated small sub-clusters to some customers).</li>
+  <li>When there is a need to separated parts of the cluster.</li>
   <li>When there is a need to run an old cluster aside a new one keeping both in production.</li>
   <li>When there is a need to scale to very large number of hosts.</li>
 </ul>

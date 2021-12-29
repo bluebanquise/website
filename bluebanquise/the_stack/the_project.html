@@ -133,6 +133,7 @@
  based on the wish to provide a simple but flexible stack to deploy and manage cluster of servers or workstations.
 <br><br>
 The stack is based on <b>Ansible</b> and <b>Python</b>, and relies heavily on inventory <b>variables precedence mechanism</b> and <b>groups</b>.
+It was designed in an attempt to be 100% modular.
   </div>
   <div class="column is-vcentered">
     <div style="text-align:center;" height="100px"><img src="/images/multiple_icebergs.svg" alt="BlueBanquise, an Ansible stack"></div>
@@ -146,16 +147,16 @@ Origin of the need
 </h2>
 While building a small HPC center in the FabLab <a href="https://www.lafabriqueduloch.org">La Fabrique du Loch</a>, at <a href="https://en.wikipedia.org/wiki/Auray">Auray</a> – France, we needed something simple, widely compatible, to manage our cluster and our workstations, but also very flexible as we are working with enterprises and universities (some wants Centos, others Ubuntu, others Microsoft Windows, etc).<br>
 <br>
-We also wanted something with less scripts as possible, to easily maintain the product and spend less time managing the cluster to save spare time doing interesting things.<br>
+We also wanted something with less scripts as possible, to easily maintain the system and save spare time doing interesting things.<br>
 <br>
-This is how Banquise and then it's spiritual son <span style="color: #108bde">Blue</span>Banquise were born.
+This is how Banquise and then it's spiritual successor <span style="color: #108bde">Blue</span>Banquise were born.
 <br>
 The stack is linked to the <a href="https://algoric.org">Algoric</a> project.
 
 <h2 class="title">
-Aim
+Objectives
 </h2>
-The stack main goal is to be a simple <b>skeleton</b> for other projects, <strong>HPC related or not</strong>.
+The stack main goal is to be a simple <b>skeleton</b> for other projects.
 <br><br>
 As it relies on Ansible, the structure of <span style="color: #108bde">Blue</span>Banquise makes it fully modular. Addons, or other tools can be seen as the flesh to make it alive.
 <br>
