@@ -180,7 +180,7 @@ html.has-navbar-fixed-top {
         <a class="navbar-item" href="/index.html">
           Home
         </a>
-        <a class="navbar-item " href="/collections.html">
+        <a class="navbar-item" href="/collections.html">
           Collections
         </a>
         <a class="navbar-item " href="/tutorials.html">
@@ -189,10 +189,10 @@ html.has-navbar-fixed-top {
         <a class="navbar-item " href="/stack.html">
           Stack
         </a>
-        <a class="navbar-item " href="/resources.html">
+        <a class="navbar-item is-active" href="/resources.html">
           Resources
         </a>
-        <a class="navbar-item is-active" href="/about.html">
+        <a class="navbar-item" href="/about.html">
           About
         </a>
         <div class="navbar-end">
@@ -214,7 +214,7 @@ html.has-navbar-fixed-top {
           <nav class="columns">
             <div class="column">
               <div style="text-align: center;">
-                <img src="images/BlueBanquise_logo.svg" alt="BlueBanquise Logo" width="20%" height="20%">
+                <img src="images/sphenisc_logo.svg" alt="Ansible collections" width="15%" height="15%">
               </div>
             </div>
           </nav>
@@ -224,56 +224,27 @@ html.has-navbar-fixed-top {
       <section class="hero">
         <div class="hero-body">
           <h1 class="title algolia-lvl0">
-            About
+            Resources
           </h1>
-          <br>
-          <div class="subtitle is-4 algolia-lvl1">
-            <span style="color: #108bde">Blue</span>Banquise, this website, and thanks
-          </div>
         </div>
       </section>
 
       <section class="hero">
         <div class="hero-body">
-          <h2 class="title is-4">The project</h2>
-          <span style="color: #108bde">Blue</span>Banquise is a project originaly named Banquise, made to run an old system in an HPC datacenter.
-          <br>Then it became BlueBanquise to manage and deploy the Algoric cluster in the <a href="https://www.lafabriqueduloch.org">lafabriqueduloch</a> FabLab.
-          <br>Now the project is autonomous and aims to provide resources to help junior and senior system admininstrators to deploy small to large clusters of servers.
-        </div>
-      </section>
-
-
-      <section class="hero">
-        <div class="hero-body">
-          <h2  class="title is-4">Contact</h2>
-          <div style="text-align:center;">
-            <img src="/images/rotatedmail.png" alt="Rotated mail" height="100px"/>
-          </div>
+          <h2  class="title is-4">Repositories</h2>
+          You can access packages repositories at <a href="http://bluebanquise.com/repository/releases/latest/">http://bluebanquise.com/repository/releases/latest/</a>
+          <br>Note that for now, packages are not signed. If this is an issue for you, please let me know and I will try to solve that.
         </div>
       </section>
 
       <section class="hero">
         <div class="hero-body">
-          <h2  class="title is-4">The website</h2>
-          This website is based on the <a href="https://bulma.io">Bulma CSS framework</a>.
-          <br>Javascript for navbar is coming from <a href="https://codepen.io/hunzaboy/pen/yoPKQW">codepen</a>.
-          <br>Iceberg ice floe image used at the top of this page is owned by Brett Phibbs.
-          <br>Web site author: <i>Benoît Leveugle</i>.
+          <h2  class="title is-4">Infrastructure</h2>
+          The whole project infrastructure code is hosted in a dedicated repository <a href="https://github.com/bluebanquise/infrastructure">on github</a>.
+          <br>Packages are normaly built on a small Raspberry PI 3 for arm64 packages and on a small Atom (N2800) based server hosted by OVH for x86_64 packages.
         </div>
       </section>
 
-      <section class="hero">
-        <div class="hero-body">
-          <h2  class="title is-4">Thanks</h2>
-          I would like to thanks:
-          <ul>
-            <li>All contributors on Github!</li>
-            <li>The <a href="https://www.lafabriqueduloch.org">Fabrique du Loch</a> for hosting the Algoric project.</li>
-            <li>The <a href="https://www.cines.fr/en/">CINES</a> for providing Algoric team with hardware for developments.</li>
-          </ul>
-        </div>
-      </section>
-  
     </div>
   </section>
 
