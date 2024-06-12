@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="has-navbar-fixed-top"><head>
-<title>BlueBanquise - Tutorials</title>
+<title>BlueBanquise - Logs</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -180,10 +180,10 @@ html.has-navbar-fixed-top {
         <a class="navbar-item" href="/index.html">
           Home
         </a>
-        <a class="navbar-item" href="/collections.html">
+        <a class="navbar-item " href="/collections.html">
           Collections
         </a>
-        <a class="navbar-item is-active" href="/tutorials.html">
+        <a class="navbar-item " href="/tutorials.html">
           Tutorials
         </a>
         <a class="navbar-item " href="/stack.html">
@@ -192,7 +192,7 @@ html.has-navbar-fixed-top {
         <a class="navbar-item " href="/resources.html">
           Resources
         </a>
-        <a class="navbar-item " href="/logs.html">
+        <a class="navbar-item is-active" href="/logs.html">
           Logs
         </a>
         <a class="navbar-item" href="/about.html">
@@ -217,7 +217,7 @@ html.has-navbar-fixed-top {
           <nav class="columns">
             <div class="column">
               <div style="text-align: center;">
-                <img src="images/multiple_icebergs.svg" alt="Ansible collections" width="40%" height="40%">
+                <img src="images/BlueBanquise_logo.svg" alt="BlueBanquise Logo" width="20%" height="20%">
               </div>
             </div>
           </nav>
@@ -227,22 +227,32 @@ html.has-navbar-fixed-top {
       <section class="hero">
         <div class="hero-body">
           <h1 class="title algolia-lvl0">
-            <span style="color: #108bde">Blue</span>Banquise tutorials
+            Logs
           </h1>
+          <br>
+          <div class="subtitle is-4 algolia-lvl1">
+            <span style="color: #108bde">Blue</span>Banquise devs and build logs
+          </div>
         </div>
       </section>
 
       <section class="hero">
         <div class="hero-body">
-          The <span style="color: #108bde">Blue</span>Banquise project aims to help junior system administrators to learn how to deploy clusters of servers.
-          <br>Part of the project is to write accessible tutorials to learn basics, like how to deploy hosts over PXE, deploy and use the Slurm scheduler, etc.
-          <br>
-          Tutorials are available either <a href="https://bluebanquise.com/tutorials/">rendered on this website</a> or <a href="https://github.com/bluebanquise/bluebanquise/tree/master/tutorials">as sources on github</a>.
+          <h2 class="title is-4">Build status</h2>
+          <span style="color: #108bde">Blue</span>Banquise build is running on a small infra with an x86_64 CPU and an arm64 CPU to build both architectures.
+          <iframe src="http://raphael.sphenisc.com" title="Build on raphael"></iframe> 
+        </div>
       </section>
-      <br>
-      <br>
-      <br>
-      <br>
+
+      <section class="hero">
+        <div class="hero-body">
+          <h2  class="title is-4">Dev logs</h2>
+            <ul>
+              <li>12 June 2024: (build) upgrade slurm to major 23.11, (dev) fix firewall role handler, (dev) improve slurm role</li>
+            </ul> 
+        </div>
+      </section>
+  
     </div>
   </section>
 
